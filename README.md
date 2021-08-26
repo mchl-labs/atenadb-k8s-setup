@@ -5,6 +5,19 @@
 ![CI/CD Docker](https://github.com/mchl-coder/atena/workflows/Docker/badge.svg)
 ### Atena DB is an in-memory K/V store, used as a database and cache. Atena has built-in LFU eviction powered by a smart algorithm which enable also on-disk persistence. Atena provide a real-time log system to minimize crash response time.
 
+## To run this DEMO
+#### Requirements:
+
+:white_check_mark: k8s cluster up and running
+
+:white_check_mark: kubectl
+
+Then to setup an atena instance on k8s run the following line in the command line: 
+
+```bash
+kubectl apply -f .
+```
+
 ## Data Structures K/V
 
 Atena provides only strings data structure. This makes it extremely versatile and all-purpose oriented.
