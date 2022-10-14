@@ -2,17 +2,19 @@
 
 ![Atena](Atena.png "Atena Logo")
 
-![CI/CD Docker](https://github.com/mchl-coder/atena/workflows/Docker/badge.svg)
+![CI/CD Docker](https://github.com/mchl-labs/atena/workflows/Docker/badge.svg)
+
 ### Atena DB is an in-memory K/V store, used as a database and cache. Atena has built-in LFU eviction powered by a smart algorithm which enable also on-disk persistence. Atena provide a real-time log system to minimize crash response time.
 
 ## To run this DEMO
+
 #### Requirements:
 
 :white_check_mark: k8s cluster up and running
 
 :white_check_mark: kubectl
 
-Then to setup an atena instance on k8s run the following line in the command line: 
+Then to setup an atena instance on k8s run the following line in the command line:
 
 ```bash
 kubectl apply -f .
@@ -27,15 +29,15 @@ Atena provides only strings data structure. This makes it extremely versatile an
 ## Database
 
 Atena can handle max 5 DB per instance. This doesn't means that you can have just five DBs. Every DB except the `DefaultDB` "Atena", which is always available to Admin, must be called with `AtenaAdmin` before to use it.
+
 - Log System:
-    
-    Every DB has its own logs. Logs are serialized with ProtoBuf by Google.
+  Every DB has its own logs. Logs are serialized with ProtoBuf by Google.
 
 ## LFU and on-disk persistence
 
 LFU and on-disk persistence features can be enabled for any DB from the C# connector at the DB connect time. LFU is powered by a smart algorithm to keep under control the memory usage by the DB. LFU enables when the records exceed half one million and the number of get requests are around 800000. At every optimization the counters which manage the LFU are randomly setted.
 
-> **Note:** LFU works very fine with on-disk persistence enabled because working together  they avoid data loss, optimizing the response time and space usage of Atena.
+> **Note:** LFU works very fine with on-disk persistence enabled because working together they avoid data loss, optimizing the response time and space usage of Atena.
 
 The `DefaultDB` "Atena" has LFU and on-disk persistence enable by default.
 
@@ -43,8 +45,8 @@ The `DefaultDB` "Atena" has LFU and on-disk persistence enable by default.
 
 ### Programming Languages supported:
 
-* [C#](Atena) : Driver Library Atena DB. Released as a Nuget package `Atena`
-* Go        : Driver Module Atena DB for Golang. Released as Go Module `atena/atenadb`
+- [C#](Atena) : Driver Library Atena DB. Released as a Nuget package `Atena`
+- Go : Driver Module Atena DB for Golang. Released as Go Module `atena/atenadb`
 
 From C# you can completly manage Atena. Atena is written in C# (.NET core) and provides full support for the C# language thanks to its library which allows you to connect with Atena. The driver is powered by the gRPC framework to offer very fast transactions and queries as well as an ultra-fast response time.
 
@@ -68,10 +70,10 @@ Releases are built by manteiners.
 
 Atena DB is cross-platform and is available in:
 
-* Windows
-* Linux
-* macOS
-* ARM
+- Windows
+- Linux
+- macOS
+- ARM
 
 ### Docker Support
 

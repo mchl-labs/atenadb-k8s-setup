@@ -13,7 +13,7 @@ spec:
     - env:
         - name: ASPNETCORE_ENVIRONMENT
           value: Production
-      image: ghcr.io/mchl-coder/atena/atena:latest
+      image: ghcr.io/mchl-labs/atena/atena:latest
       name: atenadb
       ports:
         - containerPort: 5001
