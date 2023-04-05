@@ -96,20 +96,10 @@ Releases are built by manteiners.
 
 Atena DB is cross-platform and is available in:
 
-<<<<<<< HEAD
-- Windows
-- Linux
-- macOS
-- ARM
-=======
 * Docker
 * K8s
 * Windows
 * Linux
 * macOS
 * ARM
->>>>>>> 3411d76704c6b3dfdace53a9e5ece73d0bff4ec8
 
-## Next Features - Coming Soon :dart:
-
-- Distributed DB with HA ( High Availability ) as Cluster
